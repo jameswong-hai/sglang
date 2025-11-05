@@ -79,6 +79,7 @@ class LongcatFlashConfig(PretrainedConfig):
             intermediate_size if intermediate_size is not None else ffn_hidden_size
         )
         self.moe_intermediate_size = expert_ffn_hidden_size
+        self.expert_ffn_hidden_size = expert_ffn_hidden_size
         self.num_attention_heads = num_attention_heads
         self.ep_size = ep_size
         self.kv_lora_rank = kv_lora_rank
