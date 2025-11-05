@@ -149,7 +149,7 @@ RUN if [ "$TARGETARCH" = "amd64" ]; then \
       if [ "$CUDA_VERSION" = "12.6.1" ]; then \
         export FLASH_MLA_DISABLE_SM100=1; \
       fi && \
-      pip install -v . ; \
+      python3 -m pip install --no-build-isolation -v . ; \
     fi
 
 # Python tools
